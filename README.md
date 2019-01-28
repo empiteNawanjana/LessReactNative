@@ -48,6 +48,10 @@ and allow you to jump directly to develop requirement features.
 - Clear cache and run the react native packager
 
   - react-native start --reset-cache
+ 
+- Install Pods
+  sudo gem install cocoapods
+  
 
 - Run IOS and Android builds
 
