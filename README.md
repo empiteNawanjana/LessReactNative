@@ -47,12 +47,12 @@ and allow you to jump directly to develop requirement features.
   
 - Compatible With latest React Native Versions >= 0.57
 
-  - IOS
+  - IOS - 
         Right Click Libraries "Add Files to Project"
         /node_modules/react-native-gesture-handlers/ios/RNGestureHandler.xcodeproj
         Go to build phases and add libRNGestureHandler.a
         
-  - Android 
+  - Android - 
         Automatically link for Android by react-native link react-native-gesture-handler
         
 - Clear cache and run the react native packager
