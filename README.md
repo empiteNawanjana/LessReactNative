@@ -54,6 +54,12 @@ and allow you to jump directly to develop requirement features.
         
   - Android - 
         Automatically link for Android by react-native link react-native-gesture-handler
+       
+- Configure Android App with Android SDK 
+  
+  - Create a file inside android folder and name it to 'local.properties' 
+  - Add your android sdk path - 
+        sdk.dir=/Users/{YOUR HOME}/Library/Android/sdk
         
 - Clear cache and run the react native packager
 
