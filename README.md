@@ -4,6 +4,14 @@ Developers are spending lot of time on creating base project when they starting 
 solution for that. It helps you to create base project which heducing the time you spend on base project of your new project
 and allow you to jump directly to develop requirement features.
 
+# New Features
+
+- Basic authentication flow added
+
+- Tab bar component added
+
+- List view compoenent added with swipe delete
+
 # Prerequisite
 
 - Node installed (LTS version)
@@ -44,36 +52,34 @@ and allow you to jump directly to develop requirement features.
 - Link the libraries to the projects
 
   - react-native link
-  
+
 - Compatible With latest React Native Versions >= 0.57
 
-  - IOS - 
-        Right Click Libraries "Add Files to Project"
-        /node_modules/react-native-gesture-handlers/ios/RNGestureHandler.xcodeproj
-        Go to build phases and add libRNGestureHandler.a
-        
-  - Android - 
-        Automatically link for Android by react-native link react-native-gesture-handler
-       
-- Configure Android App with Android SDK 
-  
-  - Create a file inside android folder and name it to 'local.properties' 
-  - Add your android sdk path - 
-        sdk.dir=/Users/{YOUR HOME}/Library/Android/sdk
-        
+  - IOS -
+    Right Click Libraries "Add Files to Project"
+    /node_modules/react-native-gesture-handlers/ios/RNGestureHandler.xcodeproj
+    Go to build phases and add libRNGestureHandler.a
+  - Android -
+    Automatically link for Android by react-native link react-native-gesture-handler
+
+- Configure Android App with Android SDK
+
+  - Create a file inside android folder and name it to 'local.properties'
+  - Add your android sdk path -
+    sdk.dir=/Users/{YOUR HOME}/Library/Android/sdk
+
 - Clear cache and run the react native packager
 
   - react-native start --reset-cache
- 
+
 - Install Pods
   sudo gem install cocoapods
-  
 
-- Run IOS and Android builds
+* Run IOS and Android builds
 
   - react-native run-ios
   - react-native run-android
 
 # Current Status
 
-    - More features will introduce soon ...
+    - Adding More components for the base ..

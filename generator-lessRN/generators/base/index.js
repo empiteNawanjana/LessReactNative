@@ -31,7 +31,9 @@ class BaseGenerator extends Base {
         "axios",
         "moment",
         "react-native-splash-screen",
-        "react-native-keyboard-aware-scroll-view"
+        "react-native-keyboard-aware-scroll-view",
+        "react-native-dropdownalert",
+        "react-native-swipeout"
       ],
       { cwd: this.destinationRoot() }
     );
@@ -46,6 +48,11 @@ class BaseGenerator extends Base {
     );
     this.fs.copyTpl(
       this.templatePath("**/*.otf"),
+      this.destinationPath(""),
+      this.answers
+    );
+    this.fs.copyTpl(
+      this.templatePath("**/*.png"),
       this.destinationPath(""),
       this.answers
     );

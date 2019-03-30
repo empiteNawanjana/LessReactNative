@@ -7,19 +7,9 @@
  */
 
 import React, { Component } from "react";
-import { Platform, StyleSheet, Text, View, Dimensions } from "react-native";
+import { Platform, StyleSheet, Text, View } from "react-native";
 import { connect } from "react-redux";
-import { HomeFunction } from "../../actions";
-import Styles from "../../styles/Styles";
-import { GREEN } from "../../styles/Colors";
-import { Button, ItemList } from "../../components";
-import {
-  scale,
-  moderateScale,
-  verticalScale
-} from "../../components/helpers/Scale";
-
-var { height, width } = Dimensions.get("window");
+import { DetailsFunction } from "../../actions";
 
 const instructions = Platform.select({
   ios: "Press Cmd+R to reload,\n" + "Cmd+D or shake for dev menu",
@@ -29,23 +19,16 @@ const instructions = Platform.select({
 });
 
 type Props = {};
-class Home extends Component<Props> {
+class Details2 extends Component<Props> {
   constructor() {
     super();
     //Constructor is always called at the first time when react native application will start in mobile, it is mostly used to create States in react native application class.
     console.log("Constructor Called.");
-    this.state = {
-      Items: ["Auth", "Navigation"]
-    };
   }
 
   componentWillMount() {
     //This function is just called right after constructor() called, It is mostly used to call asynchronous functions or web calls from react native apps.
     console.log("ComponentWillMount() Called.");
-  }
-
-  didPressButton() {
-    this.props.navigation.navigate("SignIn");
   }
 
   render() {
@@ -54,25 +37,8 @@ class Home extends Component<Props> {
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>Welcome to React Native!</Text>
-        <Text style={styles.instructions}>This is Home</Text>
+        <Text style={styles.instructions}>This is Details 2</Text>
         <Text style={styles.instructions}>{instructions}</Text>
-        <ItemList
-          data={this.state.Items}
-          onPressRow={item => {
-            if (item == this.state.Items[0]) {
-              this.props.navigation.navigate("SignIn");
-            } else {
-              this.props.navigation.navigate("HomeDetails");
-            }
-          }}
-        />
-        <Button
-          onPress={this.didPressButton.bind(this)}
-          buttonStyle={styles.loginButton}
-          textStyle={Styles.colorWhite}
-        >
-          Navigate
-        </Button>
       </View>
     );
   }
@@ -136,25 +102,19 @@ const styles = StyleSheet.create({
     textAlign: "center",
     color: "#333333",
     marginBottom: 5
-  },
-  loginButton: {
-    width: width - 42,
-    borderRadius: 3,
-    backgroundColor: GREEN,
-    height: scale(35)
   }
 });
 
 const mapDispatchToProps = {
-  HomeFunction
+  DetailsFunction
 };
 
 const mapStateToProps = ({ HomeReducer }) => {
-  const { isHomeSample } = HomeReducer;
-  return { isHomeSample };
+  const { isDetailsSample } = HomeReducer;
+  return { isDetailsSample };
 };
 
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(Home);
+)(Details2);
